@@ -1,0 +1,202 @@
+// .currency {
+//   position: absolute;
+//   transform: translate(-50%, -50%);
+//   background-color: rgba(255, 255, 255, 0.4);
+//   -webkit-backdrop-filter: blur(3px);
+//   backdrop-filter: blur(13px);
+//   font-weight: bold;
+//   height: fit-content;
+//   width: fit-content;
+//   box-shadow: rgb(255, 255, 255) 0px 3px 8px;
+//   left: 50%;
+//   top: 80%;
+//   padding: 3%;
+// }
+// {
+
+// {
+//   "success": true,
+//   "validationMessage": [],
+//   "baseCurrency": "INR",
+//   "unit": "ounce",
+//   "rates": {
+//     "XAU": 166172.270344,
+//     "XAG": 1908.0934180999998,
+//     "PA": 80068.06474039999,
+//     "PL": 76863.92831599999,
+//     "GBP": 0.009535056961789957,
+//     "EUR": 0.011145125709398306
+//   }
+// }
+
+//   "success": true,
+//   "validationMessage": [],
+//   "baseCurrency": "INR",
+//   "unit": "gram",
+//   "rates": {
+//     "XAU": 5339.943074774304,
+//     "XAG": 61.32959611343426,
+//     "PA": 2576.928516341468,
+//     "PL": 2476.0727225362225,
+//     "GBP": 0.009540620570980962,
+//     "EUR": 0.011148637504041034,
+//     "USD": 0.011995650377173237,
+//     "INR": 1
+//   }
+// }
+
+// //
+
+// {
+//   "success": true,
+//   "validationMessage": [],
+//   "baseCurrency": "USD",
+//   "unit": "ounce",
+//   "rates": {
+//     "XAU": 1992.92,
+//     "XAG": 22.881,
+//     "PA": 960.725,
+//     "PL": 923.64,
+//     "USD": 1,
+//     "GBP": 0.79534,
+//     "EUR": 0.92939
+//   }
+// }
+
+// //
+
+// {
+//   "success": true,
+//   "validationMessage": [],
+//   "baseCurrency": "USD",
+//   "unit": "ounce",
+//   "rates": {
+//     "XAU": 1992.79,
+//     "XAG": 22.883,
+//     "PA": 959.978,
+//     "PL": 924.44,
+//     "GBP": 0.79534,
+//     "EUR": 0.92939,
+//     "USD": 1,
+//     "INR": 83.36355
+//   }
+// }
+// }
+
+// //1 oz	0.02835 kg	0 kg 28.35 g
+
+// //Latest In chosen currency
+
+// import axios from "axios";
+
+// const option = {
+//   method: "GET",
+//   url: "https://live-metal-prices.p.rapidapi.com/v1/latest/GBP,EUR,SGD,USD,INR,RUB,NZD,MXN,AED,AUD,CAD,CNY,JPY/USD",
+//   headers: {
+//     "X-RapidAPI-Key": "3914948a66mshef558a7ebe15617p18b1fcjsn198fbfab50fb",
+//     "X-RapidAPI-Host": "live-metal-prices.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }
+// //
+
+// import axios from "axios";
+
+// const options = {
+//   method: "GET",
+//   url: "https://live-metal-prices.p.rapidapi.com/v1/latest/XAU,XAG,PA,PL,GBP,EUR/INR",
+//   headers: {
+//     "X-RapidAPI-Key": "aa683dbca3msh246b424faaa5b5cp1316bcjsn7bd81af150c4",
+//     "X-RapidAPI-Host": "live-metal-prices.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }
+
+// //Latest Selected Metals in Selected Currency In Grams
+
+// const optios = {
+//   method: "GET",
+//   url: "https://live-metal-prices.p.rapidapi.com/v1/latest/XAU,XAG,PA,PL,GBP,EUR,SGD,USD,INR,RUB,NZD,MXN,AED,AUD,CAD,CNY,JPY/INR/gram",
+//   headers: {
+//     "X-RapidAPI-Key": "3914948a66mshef558a7ebe15617p18b1fcjsn198fbfab50fb",
+//     "X-RapidAPI-Host": "live-metal-prices.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }
+// //
+
+// import axios from "axios";
+
+// const options2 = {
+//   method: "GET",
+//   url: "https://live-metal-prices.p.rapidapi.com/v1/latest/XAU,XAG,PA,PL,GBP,EUR,USD,INR/INR/gram",
+//   headers: {
+//     "X-RapidAPI-Key": "aa683dbca3msh246b424faaa5b5cp1316bcjsn7bd81af150c4",
+//     "X-RapidAPI-Host": "live-metal-prices.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options2);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }
+
+// //Latest (retrieve XAU, XAG, PA, PL, EUR, GBP, USD)
+
+// import axios from "axios";
+
+// const options3 = {
+//   method: "GET",
+//   url: "https://live-metal-prices.p.rapidapi.com/v1/latest",
+//   headers: {
+//     "X-RapidAPI-Key": "aa683dbca3msh246b424faaa5b5cp1316bcjsn7bd81af150c4",
+//     "X-RapidAPI-Host": "live-metal-prices.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options3);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }
+
+// //Latest (retrieve selected 160+ Symbols)
+
+// import axios from "axios";
+
+// const options4 = {
+//   method: "GET",
+//   url: "https://live-metal-prices.p.rapidapi.com/v1/latest/XAU,XAG,PA,PL,GBP,EUR,USD,INR",
+//   headers: {
+//     "X-RapidAPI-Key": "aa683dbca3msh246b424faaa5b5cp1316bcjsn7bd81af150c4",
+//     "X-RapidAPI-Host": "live-metal-prices.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options4);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }

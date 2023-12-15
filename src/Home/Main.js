@@ -19,6 +19,12 @@ function Main() {
                     <li>
                       <Link to="/sliver">SLIVER</Link>
                     </li>
+                    <li>
+                      <Link to="/platinum">Platinum</Link>
+                    </li>
+                    <li>
+                      <Link to="/currency">CurrencyExchange</Link>
+                    </li>
                   </ul>
                 </li>
               </ul>

@@ -1,10 +1,11 @@
 import "./MetalTracker.css";
-// import gold from "../Images/gold.jpg";
-import { Link } from "react-router-dom";
+import gold from "../Images/gold.jpg";
 import Main from "./Main";
-import api from "./API";
-import axios from "axios";
+// import api from "./API";
+// import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { useRef } from "react";
+import { Button } from "@mui/material";
 
 function GoldTracker() {
   const data = {
@@ -33,6 +34,11 @@ function GoldTracker() {
   };
 
   const [timeZone, setTimeZone] = useState("");
+  const inputRef = useRef(null);
+  function handleClick() {
+    console.log(inputRef.current.value);
+    inputRef.current.value = "";
+  }
 
   useEffect(() => {
     const date = new Date();
@@ -43,6 +49,7 @@ function GoldTracker() {
 
     const currentTimeZone = date.toLocaleString("en-US", options);
     setTimeZone(currentTimeZone);
+    console.log(inputRef.current.value);
   }, []);
   // const data = {
   //   method: "GET",
@@ -58,6 +65,14 @@ function GoldTracker() {
   // } catch (error) {
   //   console.error(error);
   // }
+  //
+  // const [Data, setData] = useState([]);
+  // function GetMetalValue(value) {
+  //   api.getMetalValue().then((response) => {
+  //     setData(response.data);
+  //     console.log(response.data);
+  //   });
+  // }
 
   return (
     <>
@@ -69,16 +84,18 @@ function GoldTracker() {
           <input
             type="text"
             name="search"
-            placeholder="Search your place here!....."
+            placeholder="Search your Country COD here!....."
             className="search-input"
+            ref={inputRef}
           />
-          <Link to="/" className="search-btn">
+          {/* <Link to="/" className="search-btn" onClick={GetMetalValue(inputRef.current.value)}> */}
+          <Button onClick={handleClick} className="search-btn">
             <i className="fas fa-search"></i>
-          </Link>
+          </Button>
         </div>
         <div className="image">
           <img
-            // src={gold}
+            src={gold}
             alt="gold"
             style={{
               width: "125px",
