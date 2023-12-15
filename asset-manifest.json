@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/metaltracker-app/static/css/main.308538cb.css",
+    "main.js": "/metaltracker-app/static/js/main.b0ea1638.js",
+    "static/media/gold.jpg": "/metaltracker-app/static/media/gold.ef2882f601438284b381.jpg",
+    "static/media/img.jpg": "/metaltracker-app/static/media/img.29b540441e048f1d9db1.jpg",
+    "static/media/sliver.jpg": "/metaltracker-app/static/media/sliver.b86eebd52b74381a3c0e.jpg",
+    "static/media/platinum.jpg": "/metaltracker-app/static/media/platinum.4992b482d7dbefb0e411.jpg",
+    "index.html": "/metaltracker-app/index.html",
+    "main.308538cb.css.map": "/metaltracker-app/static/css/main.308538cb.css.map",
+    "main.b0ea1638.js.map": "/metaltracker-app/static/js/main.b0ea1638.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.308538cb.css",
+    "static/js/main.b0ea1638.js"
+  ]
+}
